@@ -1,5 +1,5 @@
 
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSearch, faSortDown, faSun } from '@fortawesome/free-solid-svg-icons';
 import './index.scss';
@@ -96,10 +96,8 @@ export const Navbar = React.memo( ({setRegion, setSearch})=>{
     
   } 
 
-  useEffect(() => {
-    if(q.length < 1)localStorage.removeItem('search');
-  }, [])
-
+  if(q.length < 1)localStorage.removeItem('search');
+  
 
   return (
 
