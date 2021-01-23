@@ -1,0 +1,51 @@
+
+
+@import '../../index.scss';
+@screen sm{
+    .card-lading{
+        @apply border border-blue-400  shadow rounded-md max-w-sm w-72 mx-auto; 
+        .card-loading-animate{
+            @apply animate-pulse  space-x-4; 
+        }
+        .card-loading-animate1{
+            @apply   bg-blue-400 h-32 w-full; 
+        }
+        .card-loading-animate2{
+            @apply flex-1 space-y-4 py-3 ; 
+            .content-1{
+                @apply h-4 bg-blue-400 rounded w-2/3 mx-auto; 
+            }
+            .content-2{
+                @apply space-y-2 mx-auto; 
+                .sub-content{
+                    @apply h-4 bg-blue-400 rounded w-1/3 mr-auto; 
+                }
+            }
+        }
+    }
+}
+
+
+@screen xl{
+    .card-lading{
+        @apply border border-blue-400  shadow rounded-md max-w-sm w-72; 
+        .card-loading-animate{
+            @apply animate-pulse  space-x-4; 
+        }
+        .card-loading-animate1{
+            @apply   bg-blue-400 h-32 w-full; 
+        }
+        .card-loading-animate2{
+            @apply flex-1 space-y-4 py-3 ; 
+            .content-1{
+                @apply h-4 bg-blue-400 rounded w-2/3 mx-auto; 
+            }
+            .content-2{
+                @apply space-y-2 mx-auto; 
+                .sub-content{
+                    @apply h-4 bg-blue-400 rounded w-1/3 mr-auto; 
+                }
+            }
+        }
+    }
+}
