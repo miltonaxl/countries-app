@@ -19,32 +19,26 @@ const Country = React.memo(({history}) => {
         const lastpath = localStorage.getItem('lastPath') || '/'
         history.replace(lastpath)
     }
-    // const lastpath = localStorage.getItem('lastPath') || '/'
-    // history.replace(lastpath)
     const handleClick = ()=>{
         backHome();
     }
 
 
     const [{data, loading, error}, setcountry] = useState({loading:true, data:null, error:null})
-
+    useEffect(()=>{
+        getCountryById(id, setcountry)
+    }, [])
    
  
     
 
     const [showModal, setShowModal ] = useState(false);
 
-   
-    window.onclick = e =>{
+    const handleCapture = e =>{
         if(e.target.className ==='modal' || e.target.className === 'close'){
             setShowModal(m => m = false)
-        }    
+        } 
     }
-    useEffect(() => {
-        getCountryById(id, setcountry)
-    }, [])
-    if(data ===undefined) history.replace('/');
-    
     return (
         <>
             <button 
@@ -67,7 +61,7 @@ const Country = React.memo(({history}) => {
                 
             }
              </div>
-             <div style={showModal ? {display:'block'} : {display:'none'}} className="modal">
+             <div onClickCapture={handleCapture} style={showModal ? {display:'block'} : {display:'none'}} className="modal">
 
                 {/* <!-- Modal content --> */}
                { 
@@ -110,7 +104,6 @@ const Card = React.memo(({ name,capital, region, population, languages, alpha3Co
     }
 
     const {bgDark} = useContext(BgContext);
-    console.log(!bgDark);
     return (
 
         <>
