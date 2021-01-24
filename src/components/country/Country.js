@@ -1,6 +1,6 @@
 import { faLongArrowAltLeft, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {  useParams } from 'react-router-dom';
 import { getCountryById } from '../../selectors/getCountryById';
 import Map from './Maps';
@@ -28,9 +28,9 @@ const Country = React.memo(({history}) => {
 
     const [{data, loading, error}, setcountry] = useState({loading:true, data:null, error:null})
 
-    getCountryById(id, setcountry)
+   
  
-
+    
 
     const [showModal, setShowModal ] = useState(false);
 
@@ -40,7 +40,11 @@ const Country = React.memo(({history}) => {
             setShowModal(m => m = false)
         }    
     }
-
+    useEffect(() => {
+        getCountryById(id, setcountry)
+    }, [])
+    if(data ===undefined) history.replace('/');
+    
     return (
         <>
             <button 
@@ -58,7 +62,7 @@ const Country = React.memo(({history}) => {
                 loading ?       
                 <Loading/>
                 : 
-                    <Card {...data}  setShowModal= {setShowModal}/>
+                (data !== undefined )&&  <Card {...data}  setShowModal= {setShowModal}/>
                
                 
             }
@@ -74,15 +78,15 @@ const Country = React.memo(({history}) => {
                <div className="modal-content">
 
                     <span  className="close">&times;</span>
-                    <p>{data.name}</p>
+                    <p> { (data !== undefined )&& data.name}</p>
                     <div className="content-map">
                       <Map 
                             googleMapURL={URLS.urlMap}
                             containerElement={<div style={{ height: '200px' }}></div>}
                             mapElement={<div style={{ height: '100%' }}></div>}
                             loadingElement={<div>cargando</div>}
-                            lat={data.latlng[0]}
-                            lng={data.latlng[1]}
+                            lat={(data !== undefined )&& data.latlng[0]}
+                            lng={(data !== undefined )&& data.latlng[1]}
                         />
                     </div>
                 </div>}

@@ -9,17 +9,12 @@ const Countries = React.memo(() => {
     
    
     const [region, setRegion ] = useState('');
+    const [getSearch, setSearch] = useState('');
     useEffect(()=>{
         const value = localStorage.getItem('region') || '';
         setRegion( value );
-    }, [])
-  
-
-
-    const [getSearch, setSearch] = useState('');
-    useEffect(()=>{
-        const value = localStorage.getItem('search') || '';
-        setSearch( value );
+        const valueSearch = localStorage.getItem('search') || '';
+        setSearch( valueSearch );
     }, [])
     const {data, loading, error} =  useFetch(region, getSearch);
     return (
