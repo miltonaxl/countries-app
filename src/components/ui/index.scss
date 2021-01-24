@@ -1,0 +1,234 @@
+
+@import '../../index.scss';
+
+.dark-nav{
+    background:$background-color-dark;
+    
+}
+
+.light-nav{
+    background:$background-color-light;
+}
+
+@screen sm{
+    
+    .nav{
+        box-shadow: $sombra-box;
+        
+        @apply flex justify-between w-full px-3 m-auto py-3 sticky top-0 z-10;
+
+        button {
+            outline:none !important;
+            @apply shadow-sm hover:shadow-lg cursor-pointer p-1;
+           
+        }
+       
+    }
+    .navbar{
+        @apply w-full h-auto;
+        .nav-inputs{
+            @apply justify-between w-11/12 m-auto py-3 ;
+    
+            .form-group {
+                box-shadow: $sombra-box;
+                 background: transparent;
+                @apply w-full m-auto my-4 h-10 border-collapse rounded-sm;
+                .form-control{
+                    width:85%;
+                     background: transparent;
+                    @apply  h-full m-auto border-none p-2;
+                }
+                label{
+                     background: transparent;
+                    @apply w-3/12 h-10 py-2 px-2 text-center justify-center items-center;
+                }
+            }
+        
+    
+           
+            .form-group-select {
+    
+                box-shadow: $sombra-box;
+                @apply w-10/12  h-11 border-collapse rounded-sm justify-between ;
+                .form-select{
+                    width: 87%;
+                    border:none;
+                     background: transparent;
+                    @apply  h-11 py-2 px-2 text-center justify-center items-center hover:shadow-2xl;
+                }
+    
+                label{
+                     background: transparent;
+                    @apply  py-3 px-2 text-center mx-auto justify-center items-center;
+                }
+            }
+        }
+    }
+}
+
+@screen xl{
+    .nav{
+        box-shadow: $sombra-box;
+        
+        @apply flex justify-between w-full px-24 m-auto py-3 sticky top-0 z-10;
+    
+        button {
+            outline:none !important;
+            @apply shadow-sm hover:shadow-lg cursor-pointer text-sm px-1 rounded-lg  border ;
+           
+        }
+       
+    }
+    .navbar{
+        @apply w-11/12 h-auto mx-auto;
+        .nav-inputs{
+            @apply w-full flex justify-between   mx-auto py-2 ;
+    
+            .form-group {
+                box-shadow: $sombra-box;
+                 background: transparent;
+                @apply w-5/12  block h-10 border-collapse rounded-sm;
+                .form-control{
+                    width:85%;
+                     background: transparent;
+                    @apply  h-full m-auto border-none p-2;
+                }
+                label{
+                     background: transparent;
+                    @apply w-3/12 h-10 py-2 px-2 text-center justify-center items-center;
+                }
+            }
+        
+    
+           
+            .form-group-select {
+    
+                box-shadow: $sombra-box;
+                @apply  w-5/12 h-11 border-collapse block rounded-sm ml-auto ;
+                .form-select{
+                    width: 87%;
+                    border:none;
+                     background: transparent;
+                    @apply  h-11 py-2 px-2 text-center justify-center items-center hover:shadow-2xl;
+                }
+    
+                label{
+                     background: transparent;
+                    @apply  py-3 px-2 text-center mx-auto justify-center items-center;
+                }
+            }
+        }
+    }
+    
+}
+@screen lg{
+    .nav{
+        box-shadow: $sombra-box;
+        
+        @apply flex justify-between w-full px-24 m-auto py-3 sticky top-0 z-10;
+    
+        button {
+            outline:none !important;
+            @apply shadow-sm hover:shadow-lg cursor-pointer text-sm px-1 rounded-lg  border ;
+           
+        }
+       
+    }
+    .navbar{
+        @apply w-11/12 h-auto mx-auto;
+        .nav-inputs{
+            @apply w-full flex justify-between   mx-auto py-2 ;
+    
+            .form-group {
+                box-shadow: $sombra-box;
+                 background: transparent;
+                @apply w-5/12  block h-10 border-collapse rounded-sm;
+                .form-control{
+                    width:85%;
+                     background: transparent;
+                    @apply  h-full m-auto border-none p-2;
+                }
+                label{
+                     background: transparent;
+                    @apply w-3/12 h-10 py-2 px-2 text-center justify-center items-center;
+                }
+            }
+        
+    
+           
+            .form-group-select {
+    
+                box-shadow: $sombra-box;
+                @apply  w-5/12 h-11 border-collapse block rounded-sm ml-auto ;
+                .form-select{
+                    width: 87%;
+                    border:none;
+                     background: transparent;
+                    @apply  h-11 py-2 px-2 text-center justify-center items-center hover:shadow-2xl;
+                }
+    
+                label{
+                     background: transparent;
+                    @apply  py-3 px-2 text-center mx-auto justify-center items-center;
+                }
+            }
+        }
+    }
+    
+}
+
+@screen md {
+    .nav{
+        box-shadow: $sombra-box;
+        
+        @apply flex justify-between w-full px-5 m-auto py-3 sticky top-0 z-10;
+    
+        button {
+            outline:none !important;
+            @apply shadow-sm hover:shadow-lg cursor-pointer text-sm px-1 rounded-lg  border ;
+           
+        }
+       
+    }
+    .navbar{
+        @apply w-11/12 h-auto mx-auto;
+        .nav-inputs{
+            @apply w-full flex justify-between   mx-auto py-2 ;
+    
+            .form-group {
+                box-shadow: $sombra-box;
+                 background: transparent;
+                @apply w-5/12  block h-10 border-collapse rounded-sm;
+                .form-control{
+                    width:85%;
+                     background: transparent;
+                    @apply  h-full m-auto border-none p-2;
+                }
+                label{
+                     background: transparent;
+                    @apply w-3/12 h-10 py-2 px-2 text-center justify-center items-center;
+                }
+            }
+        
+    
+           
+            .form-group-select {
+    
+                box-shadow: $sombra-box;
+                @apply  w-5/12 h-11 border-collapse block rounded-sm ml-auto ;
+                .form-select{
+                    width: 87%;
+                    border:none;
+                     background: transparent;
+                    @apply  h-11 py-2 px-2 text-center justify-center items-center hover:shadow-2xl;
+                }
+    
+                label{
+                     background: transparent;
+                    @apply  py-3 px-2 text-center mx-auto justify-center items-center;
+                }
+            }
+        }
+    }
+}
+

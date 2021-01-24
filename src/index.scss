@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+$sombra-box:0 1px 3px 0 rgba(0, 0, 0, 0.1%);
+
+$background-color-dark: #2b3743,;
+$background-color-light: white;
+$complimentary-color-dark: #2b3743,;
+$complimentary-color-light: white;
+
+body {
+    background-color: $background-color-light;
+    color: $background-color-dark;
+}
+  
+body.dark-mode {
+    background-color: $background-color-dark;
+    color: $background-color-light;
+}
+
+html{
+    @apply font-serif;
+}
+.body {
+    @apply font-serif;
+}
+
+input:focus, input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+   
+ }
+
+.container{
+    max-width: 1200px;
+    @apply mx-auto;
+}

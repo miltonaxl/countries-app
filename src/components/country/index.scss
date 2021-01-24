@@ -1,0 +1,241 @@
+@import '../../index.scss';
+
+
+
+
+@screen sm {
+    .button-back {
+        background: transparent;
+        box-shadow: $sombra-box;
+        @apply w-4/12 ml-3 mt-4 rounded-md shadow-lg border border-gray-700 hover:border-black;
+    }
+
+   
+
+    .card {
+        box-shadow: $sombra-box;
+        @apply w-10/12 mx-auto overflow-hidden mt-5 mb-3 rounded-lg shadow-xl ;
+        
+        .faSpinner {
+            width: 100%;
+            @apply text-5xl mt-16;
+        }
+        img {
+            @apply object-cover;
+        }
+        
+
+        .card-body {
+            @apply my-4 pb-2 h-auto;
+            .error{
+                @apply w-full bg-red-600 h-10 text-center shadow-lg rounded-lg p-2 mb-4;
+            }
+            h1 {
+                @apply text-4xl w-full text-center my-3;
+            }
+
+            .card-text {
+                @apply p-3 mt-3;
+                p{
+                    @apply flex;
+                    .borders-group {
+                        @apply w-10/12 mt-1 h-auto;
+    
+                        p {
+                            @apply w-full;
+                        }
+    
+                        .borders {
+                            @apply w-auto px-1 text-center text-xs float-left shadow-xl ;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+
+            }
+            
+        }
+        .btnMap{
+            @apply w-3/12 block mx-auto mt-1  ;
+        }
+    }
+}
+@screen md {
+    .button-back {
+        background: transparent;
+        box-shadow: $sombra-box;
+        @apply w-28  ml-20 mt-4 rounded-md shadow-lg border border-gray-700 hover:border-black;
+    }
+
+   
+
+    .card {
+        box-shadow: $sombra-box;
+        @apply w-10/12 mx-auto overflow-hidden mt-6 mb-3 h-auto rounded-lg shadow-xl grid grid-cols-2 gap-4 ;
+        
+        img {
+            @apply object-cover;
+        }
+        
+
+        .card-body {
+            @apply my-2 pb-2 h-auto;
+            .error{
+                @apply w-full bg-red-600 h-10 text-center shadow-lg rounded-lg p-2 mb-4;
+            }
+            h1 {
+                @apply text-4xl w-full text-center mb-1;
+            }
+
+            .card-text {
+                @apply p-1  mb-3;
+                p{
+                    @apply flex;
+                    .borders-group {
+                        @apply w-10/12 mt-1 h-auto;
+    
+                        p {
+                            @apply w-full;
+                        }
+    
+                        .borders {
+                            @apply w-auto px-1 text-center text-xs float-left shadow-xl ;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+
+            }
+            .btnMap{
+                @apply w-3/12 block mx-auto mb-1  rounded-lg border-2 ;
+            }
+            
+        }
+        
+    }
+}
+
+@screen lg {
+    .button-back {
+        background: transparent;
+        box-shadow: $sombra-box;
+        @apply w-28  ml-20 mt-4 rounded-md shadow-lg border border-gray-700 hover:border-black;
+    }
+
+   
+
+    .card {
+        box-shadow: $sombra-box;
+        @apply w-10/12 mx-auto overflow-hidden mt-6 mb-3 h-auto rounded-lg shadow-xl grid grid-cols-2 gap-4 ;
+        
+        img {
+            @apply object-cover;
+        }
+        
+
+        .card-body {
+            @apply my-2 pb-2 h-auto;
+            .error{
+                @apply w-full bg-red-600 h-10 text-center shadow-lg rounded-lg p-2 mb-4;
+            }
+            h1 {
+                @apply text-4xl w-full text-center mb-1;
+            }
+
+            .card-text {
+                @apply p-1  mb-3;
+                p{
+                    @apply flex;
+                    .borders-group {
+                        @apply w-10/12 mt-1 h-auto;
+    
+                        p {
+                            @apply w-full;
+                        }
+    
+                        .borders {
+                            @apply w-auto px-1 text-center text-xs float-left shadow-xl ;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+
+            }
+            .btnMap{
+                @apply w-3/12 block mx-auto mb-1  rounded-lg border-2;
+            }
+            
+        }
+        
+    }
+}
+
+@screen xl {
+    .button-back {
+        background: transparent;
+        box-shadow: $sombra-box;
+        @apply w-28  ml-20 mt-4 rounded-md shadow-lg border border-gray-700 hover:border-black;
+    }
+
+   
+
+    .card {
+        box-shadow: $sombra-box;
+        @apply w-10/12 mx-auto overflow-hidden mt-6 mb-3 h-auto rounded-lg shadow-xl grid grid-cols-2 gap-4 ;
+        
+        img {
+            @apply object-cover;
+        }
+        
+
+        .card-body {
+            @apply my-2 pb-2 h-auto;
+            .error{
+                @apply w-full bg-red-600 h-10 text-center shadow-lg rounded-lg p-2 mb-4;
+            }
+            h1 {
+                @apply text-4xl w-full text-center mb-1;
+            }
+
+            .card-text {
+                @apply p-1  mb-3;
+                p{
+                    @apply flex;
+                    .borders-group {
+                        @apply w-10/12 mt-1 h-auto;
+    
+                        p {
+                            @apply w-full;
+                        }
+    
+                        .borders {
+                            @apply w-auto px-1 text-center text-xs float-left shadow-xl ;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+
+            }
+            .btnMap{
+                @apply w-3/12 block mx-auto mb-1 rounded-lg border-2;
+            }
+            
+        }
+        
+    }
+}
+.modal{
+    @apply fixed z-30 p-4 left-0 top-0 w-full h-full overflow-auto text-black;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    .modal-content{
+        @apply  bg-white mx-auto p-3 border-2 border-gray-500 border-solid w-5/6 z-50;
+        .close{
+            cursor: pointer; 
+            @apply text-gray-400 float-right text-xl font-bold hover:text-black;
+        }
+        .content-map{
+            @apply mt-3;
+        }
+    }
+}
