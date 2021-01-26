@@ -68,6 +68,7 @@
 
 @screen xl{
     .nav{
+        max-width: 1400px;
         box-shadow: $sombra-box;
         
         @apply flex justify-between w-full px-24 m-auto py-3 sticky top-0 z-10;
