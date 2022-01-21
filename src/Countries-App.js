@@ -1,15 +1,11 @@
-import React from 'react';
-import CountriesRoutes from './routes/Countries.Routes';
+import React from "react";
+import CountriesRoutes from "./routes/Countries.Routes";
 const CountriesApp = () => {
-
- 
-
-    return (
-        <>
-         
-          <CountriesRoutes/>
-        </>
-    )
-}
+  return (
+    <>
+      <CountriesRoutes />
+    </>
+  );
+};
 
 export default CountriesApp;
